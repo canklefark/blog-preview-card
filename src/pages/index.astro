@@ -1,16 +1,50 @@
 ---
+import "../styles/main.css";
 
+const pubDate = "21 Dec 2023";
+const desc =
+  "These languages are the backbone of every website, defining structure, content, and presentation.";
+const author = "Greg Hooper";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Blog Preview Card</title>
+  </head>
+  <body>
+    <main
+      class="card flex flex-col bg-light p-lg radius-base box-shadow border"
+      style="max-width: 350px;">
+      <img class="radius-sm" src="/images/illustration-article.svg" alt="" />
+      <p class="text-sm fw-bold p-sm bg-accent max-content">Learning</p>
+      <p class="text-sm">Published {pubDate}</p>
+      <h3 class="fw-bold">HTML & CSS foundations</h3>
+      <p class="text-neutral">{desc}</p>
+      <div class="flex center-item">
+        <img class="avatar" src="/images/image-avatar.webp" alt="" />
+        <p class="fw-bold">{author}</p>
+      </div>
+    </main>
+  </body>
 </html>
+
+<style>
+  html {
+    background: hsl(var(--clr-accent));
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 2.5em;
+    aspect-ratio: 1;
+  }
+</style>

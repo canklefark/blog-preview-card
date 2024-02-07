@@ -1,0 +1,67 @@
+@import 'reset.css';
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/fonts/Figtree-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+:root {
+  --fallback-fonts: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --clr-accent: 47 88% 63%;
+  --clr-neutral-light: 0 0% 100%;
+  --clr-neutral-dark: 0 0% 7%;
+  --clr-neutral: 0 0 50%;
+
+  --fs-100: clamp(0.7rem, 0.08vw + 0.68rem, 0.75rem);
+  --fs-400: clamp(0.88rem, 0.19vw + 0.83rem, 1rem);
+  --fs-500: clamp(1.09rem, 0.36vw + 1.01rem, 1.33rem);
+  --fs-600: clamp(1.37rem, 0.62vw + 1.22rem, 1.78rem);
+  --fs-700: clamp(1.71rem, 0.99vw + 1.48rem, 2.37rem);
+  --fs-800: clamp(2.14rem, 1.53vw + 1.78rem, 3.16rem);
+  --fs-900: clamp(2.67rem, 2.31vw + 2.13rem, 4.21rem);
+
+  --fw-400: 600;
+  --fw-900: 800;
+}
+
+html { 
+  font-family: "Figtree", var(--fallback-fonts);
+  color: hsl(var(--clr-neutral-dark));
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+}
+
+/** Utility Classes */ 
+.bg-accent { background: hsl(var(--clr-accent)); }
+.bg-light { background: hsl(var(--clr-neutral-light)); }
+
+.text-neutral { color: hsl(var(--clr-neutral)); }
+.fs-sm { font-size: var(--fs-sm); }
+.fs-h3 { font-size: var(--fs-h3); }
+.fw-bold { font-weight: var(--fw-900); }
+
+.flex { display: flex; gap: var(--gap, 1rem); }
+.flex-col { flex-direction: column; }
+.center-justify { justify-content: center; }
+.center-item { align-items: center; }
+
+.p-xs { padding: .5rem; }
+.p-sm { padding: .75rem; }
+.p-base { padding: 1rem; }
+.p-lg { padding: 1.5rem; }
+.p-xl { padding: 2rem; }
+
+max-content { width: max-content; }
+
+.border { border: 1px solid hsl(var(--clr-neutral-dark)); }
+
+.radius-xs { border-radius: .5rem; }
+.radius-sm { border-radius: 1rem; }
+.radius-base { border-radius: 2rem; }
+.box-shadow { box-shadow: 10px 10px hsl(var(--clr-neutral-dark));}
+
+
+
