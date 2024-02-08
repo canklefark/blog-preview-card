@@ -1,5 +1,8 @@
 ---
 import '../styles/main.css';
+import { Image } from 'astro:assets';
+import featImage from '../images/illustration-article.svg';
+import avatar from '../images/image-avatar.webp';
 
 const pubDate = '21 Dec 2023';
 const desc =
@@ -19,7 +22,7 @@ const author = 'Greg Hooper';
     <main
       class="card | flex flex-col bg-light p-lg radius-sm box-shadow border"
       style="max-width: 40ch; --gap: 1.25rem">
-      <img class="radius-xs" src="../images/illustration-article.svg" alt="" />
+      <Image src={featImage} alt="A cool vector design" />
       <div class="flex flex-col" style="--gap: .75rem">
         <p class="tag | fw-bold bg-accent">Learning</p>
         <p class="">Published {pubDate}</p>
@@ -27,7 +30,7 @@ const author = 'Greg Hooper';
       <a href="#"><h3 class="fw-bold fs-h3">HTML & CSS foundations</h3></a>
       <p class="text-neutral">{desc}</p>
       <div class="flex center-item">
-        <img class="avatar" src="../images/image-avatar.webp" alt="" />
+        <Image src={avatar} alt="A headshot of the author" />
         <p class="fw-bold">{author}</p>
       </div>
     </main>
