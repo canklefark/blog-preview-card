@@ -50,13 +50,15 @@ html {
 .center-justify { justify-content: center; }
 .center-item { align-items: center; }
 
+.w-full { width: 100%; }
+
 .p-xs { padding: .5rem; }
 .p-sm { padding: .75rem; }
 .p-base { padding: 1rem; }
 .p-lg { padding: 1.5rem; }
 .p-xl { padding: 2rem; }
 
-max-content { width: max-content; }
+.max-content { max-width: max-content; }
 
 .border { border: 1px solid hsl(var(--clr-neutral-dark)); }
 
