@@ -23,7 +23,8 @@
   --fs-800: clamp(2.14rem, 1.53vw + 1.78rem, 3.16rem);
   --fs-900: clamp(2.67rem, 2.31vw + 2.13rem, 4.21rem);
 
-  --fw-400: 600;
+  --fw-400: 400;
+  --fw-600: 600;
   --fw-900: 800;
 }
 
@@ -39,8 +40,9 @@ html {
 .bg-light { background: hsl(var(--clr-neutral-light)); }
 
 .text-neutral { color: hsl(var(--clr-neutral)); }
-.fs-sm { font-size: var(--fs-sm); }
-.fs-h3 { font-size: var(--fs-h3); }
+.fs-sm { font-size: var(--fs-100); }
+.fs-h3 { font-size: var(--fs-600); }
+.fw-semibold { font-weight: var(--fw-600); }
 .fw-bold { font-weight: var(--fw-900); }
 
 .flex { display: flex; gap: var(--gap, 1rem); }
@@ -58,7 +60,7 @@ max-content { width: max-content; }
 
 .border { border: 1px solid hsl(var(--clr-neutral-dark)); }
 
-.radius-xs { border-radius: .5rem; }
+.radius-xs { border-radius: .75rem; }
 .radius-sm { border-radius: 1rem; }
 .radius-base { border-radius: 2rem; }
 .box-shadow { box-shadow: 10px 10px hsl(var(--clr-neutral-dark));}

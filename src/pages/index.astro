@@ -1,10 +1,10 @@
 ---
-import "../styles/main.css";
+import '../styles/main.css';
 
-const pubDate = "21 Dec 2023";
+const pubDate = '21 Dec 2023';
 const desc =
-  "These languages are the backbone of every website, defining structure, content, and presentation.";
-const author = "Greg Hooper";
+  'These languages are the backbone of every website, defining structure, content, and presentation.';
+const author = 'Greg Hooper';
 ---
 
 <html lang="en">
@@ -17,12 +17,14 @@ const author = "Greg Hooper";
   </head>
   <body>
     <main
-      class="card flex flex-col bg-light p-lg radius-base box-shadow border"
-      style="max-width: 350px;">
-      <img class="radius-sm" src="/images/illustration-article.svg" alt="" />
-      <p class="text-sm fw-bold p-sm bg-accent max-content">Learning</p>
-      <p class="text-sm">Published {pubDate}</p>
-      <h3 class="fw-bold">HTML & CSS foundations</h3>
+      class="card | flex flex-col bg-light p-lg radius-sm box-shadow border"
+      style="max-width: 40ch; --gap: 1.25rem">
+      <img class="radius-xs" src="/images/illustration-article.svg" alt="" />
+      <div class="flex flex-col" style="--gap: .75rem">
+        <p class="tag | fw-bold bg-accent">Learning</p>
+        <p class="">Published {pubDate}</p>
+      </div>
+      <a href="#"><h3 class="fw-bold fs-h3">HTML & CSS foundations</h3></a>
       <p class="text-neutral">{desc}</p>
       <div class="flex center-item">
         <img class="avatar" src="/images/image-avatar.webp" alt="" />
@@ -46,5 +48,21 @@ const author = "Greg Hooper";
   .avatar {
     width: 2.5em;
     aspect-ratio: 1;
+  }
+
+  a {
+    text-decoration: none;
+    transition: color 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  a:hover,
+  a:focus {
+    color: hsl(var(--clr-accent));
+  }
+
+  .tag {
+    max-width: max-content;
+    padding: 0.5em 1em;
+    border-radius: 0.25rem;
+    line-height: 1;
   }
 </style>
