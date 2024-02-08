@@ -22,7 +22,7 @@ const author = 'Greg Hooper';
     <main
       class="card | flex flex-col bg-light p-lg radius-sm box-shadow border"
       style="max-width: 40ch; --gap: 1.25rem">
-      <Image class="radius-sm w-full" src={featImage} alt="A cool vector design" />
+      <Image class="feat-img" src={featImage} alt="A cool vector design" />
       <div class="flex flex-col" style="--gap: .75rem">
         <p class="tag | fw-bold bg-accent">Learning</p>
         <p class="">Published {pubDate}</p>
@@ -48,9 +48,16 @@ const author = 'Greg Hooper';
     align-items: center;
   }
 
+  .feat-img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 1rem;
+  }
+
   .avatar {
     width: 2.5em;
-    aspect-ratio: 1;
+    height: 2.5em;
   }
 
   a {
